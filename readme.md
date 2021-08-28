@@ -21,5 +21,5 @@ const koalityGuideClient = new Client('md');
 For more examples see the `/examples` directory.
 
 ## Features
-- **Fallback language**: When creating a new client a fallback language can be added. If no guide for the actual language was found the client will return the fallback language guide if exists.
-
+- **Fallback language**: when creating a new client a fallback language can be added. If no guide for the actual language was found the client will return the fallback language guide if exists.
+- **Multi format**: in future it will be possible to fetch the guide in multiple formats. We will start with markdown (md) and html.
