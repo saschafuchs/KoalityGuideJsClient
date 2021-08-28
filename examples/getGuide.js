@@ -1,12 +1,9 @@
 const Client = require('../src/Client')
 
-const client = new Client();
+const koalityGuideClient = new Client('md');
 
 (async () => {
-    // const guide = await client.getGuide('html_deadlink_403')
-    const guide = await client.getGuide('de')
-    console.log(guide.getIdentifier())
+    const guide = await koalityGuideClient.getGuide('html.deadlink.404', 'de')
+    console.log('Identifier: ', guide.getIdentifier())
     console.log(guide.getText())
 })()
-
-
