@@ -16,7 +16,7 @@ class Client {
      * @param {string} fallbackLanguage
      */
     constructor(format = 'md', fallbackLanguage = 'en') {
-        this._baseUrl = 'https://api.koalityguide.com/KoalityContent'
+        this._baseUrl = 'https://api.koalityguide.com'
         this._axios = axios
         this._assertFormatAllowed(format)
         this._format = format
