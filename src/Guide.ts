@@ -4,7 +4,11 @@
  * @author Nils Langner <nils.langner@webpros.com>
  * @created 2021-08-28
  */
-class Guide {
+export default class Guide {
+  private _identifier: string
+  private _language: string
+  private _text: string
+  private _format: string
     /**
      * The constructor.
      *
@@ -13,7 +17,7 @@ class Guide {
      * @param {string} text
      * @param {string} format
      */
-    constructor(identifier, language, text, format = 'md') {
+    constructor(identifier: string, language: string, text: string, format = 'md') {
         this._identifier = identifier
         this._language = language
         this._text = text
@@ -25,7 +29,7 @@ class Guide {
      *
      * @returns {string}
      */
-    getText() {
+    getText() : string {
         return this._text
     }
 
@@ -34,7 +38,7 @@ class Guide {
      *
      * @returns {string}
      */
-    getIdentifier() {
+    getIdentifier() : string {
         return this._identifier
     }
 
@@ -43,7 +47,7 @@ class Guide {
      *
      * @returns {string}
      */
-    getLanguage() {
+    getLanguage() : string {
         return this._language
     }
 
@@ -52,9 +56,7 @@ class Guide {
      *
      * @returns {string}
      */
-    getFormat() {
+    getFormat() : string {
         return this._format
     }
 }
-
-module.exports = Guide

@@ -4,7 +4,6 @@
  * @author Nils Langner <nils.langner@webpros.com>
  * @created 2021-08-28
  */
-class NotFoundError extends Error {
+export default class NotFoundError extends Error {
 }
 
-module.exports = NotFoundError
