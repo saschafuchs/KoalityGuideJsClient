@@ -77,7 +77,10 @@ export default class Client {
    */
   private async _getGuideText(identifier: string, language: string, primaryLanguage = 'en'): Promise<IResponse> {
     // https://api.koalityguide.com/KoalityContent/html/deadlink/404.de.md
-    const url = `${this._baseUrl}/${identifier.replaceAll('.', '/')}.${language}.${this._format}`
+    // const url = `${this._baseUrl}/${identifier.replaceAll('.', '/')}.${language}.${this._format}`
+
+    // https://api.koalityguide.com/?identifier=html.deadlink.404&language=en&format=md
+    const url = `${this._baseUrl}/?identifier=${identifier}&language=${language}&format=${this._format}&fallbackLanguage=${this._fallbackLanguage}`
 
     let response = <IApiResponse>{}
     try {
@@ -97,6 +100,8 @@ export default class Client {
         throw error
       }
     }
+
+    console.log(response)
 
     return {text: response.data, fetchedLanguage: language}
   }

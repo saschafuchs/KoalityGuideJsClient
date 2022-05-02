@@ -17,6 +17,7 @@ export default class Guide {
     private _text: string
     private _format: string
     private _buttons: IButtons
+
     /**
      * The constructor.
      *
@@ -39,7 +40,7 @@ export default class Guide {
      *
      * @returns {string}
      */
-    getText() : string {
+    getText(): string {
         return this._text
     }
 
@@ -48,7 +49,7 @@ export default class Guide {
      *
      * @returns {string}
      */
-    getIdentifier() : string {
+    getIdentifier(): string {
         return this._identifier
     }
 
@@ -57,7 +58,7 @@ export default class Guide {
      *
      * @returns {string}
      */
-    getLanguage() : string {
+    getLanguage(): string {
         return this._language
     }
 
@@ -66,7 +67,7 @@ export default class Guide {
      *
      * @returns {string}
      */
-    getFormat() : string {
+    getFormat(): string {
         return this._format
     }
 
