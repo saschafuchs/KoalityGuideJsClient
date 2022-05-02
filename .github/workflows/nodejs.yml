@@ -1,0 +1,21 @@
+name: Publish koalityGuideJsClient
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: volta-cli/action@v1
+      - run: npm ci --no-audit
+      - run: npm run lint --if-present
+      - run: npm test
+      - run: npm run build --if-present
+        env:
+          CI: true

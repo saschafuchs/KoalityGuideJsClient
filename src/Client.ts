@@ -60,8 +60,8 @@ export default class Client {
    * @returns {Promise<Guide>}
    */
   async getGuide(identifier: string, language = 'en') {
-    const { text, fetchedLanguage } = await this._getGuideText(identifier, language)
-    return new Guide(identifier, fetchedLanguage, text, this._format)
+    const {text, fetchedLanguage} = await this._getGuideText(identifier, language)
+    return new Guide(identifier, fetchedLanguage, text, this._format, {})
   }
 
   /**

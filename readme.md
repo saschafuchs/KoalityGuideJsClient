@@ -4,10 +4,29 @@ This client is used to connect to the KoalityClient database and fetch guides fo
 
 **Important**: When fetching data from the KoalityGuide only use this client. The API of the server will change in future, but we try to keep this client compatible as long a possible.
 
+## Installation
+
+```bash
+git clone https://github.com/koality-io/KoalityGuideJsClient
+cd KoalityGuideJsClient
+npm i
+```
+
+## Available Scripts
+
+- `start` - run the application within a local,
+- `clean` - remove coverage data, Jest cache and transpiled files,
+- `build` - transpile TypeScript to ES2020,
+- `dev` - interactive watch mode to automatically transpile source files,
+- `build:release` - clean and transpile source files for production usage,
+- `lint` - lint source files and tests,
+- `test` - run tests,
+- `test:watch` - interactive watch mode to automatically re-run tests
+
 ## Example
 
 ```javascript
-const Client = require('../src/Client')
+const Client = require('../dist/Client')
 
 const koalityGuideClient = new Client('md');
 
