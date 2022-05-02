@@ -4,11 +4,19 @@
  * @author Nils Langner <nils.langner@webpros.com>
  * @created 2021-08-28
  */
+
+interface IButtons {
+    text: string
+    url: string
+    target?: string
+}
+
 export default class Guide {
-  private _identifier: string
-  private _language: string
-  private _text: string
-  private _format: string
+    private _identifier: string
+    private _language: string
+    private _text: string
+    private _format: string
+    private _buttons: IButtons
     /**
      * The constructor.
      *
@@ -16,12 +24,14 @@ export default class Guide {
      * @param {string} language
      * @param {string} text
      * @param {string} format
+     * @param {IButtons} buttons
      */
-    constructor(identifier: string, language: string, text: string, format = 'md') {
+    constructor(identifier: string, language: string, text: string, format = 'md', buttons: IButtons) {
         this._identifier = identifier
         this._language = language
         this._text = text
         this._format = format
+        this._buttons = buttons
     }
 
     /**
@@ -58,5 +68,9 @@ export default class Guide {
      */
     getFormat() : string {
         return this._format
+    }
+
+    getButtons(): IButtons {
+        return this._buttons
     }
 }
