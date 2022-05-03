@@ -1,5 +1,5 @@
 {
-  "name": "koality-guide-client",
+  "name": "@saschafuchs/koality-guide-client",
   "version": "1.0.0",
   "description": "The KoalityGuide client connects a JavaScript application to the guides.",
   "author": "Nils Langner (nils.langner@leankoala.com)",
