@@ -6,7 +6,7 @@
  */
 
 interface IButtons {
-  text?: string
+  text: string
   url?: string
   target?: string
 }
@@ -32,7 +32,7 @@ export default class Guide {
     this._language = language
     this._text = text
     this._format = format
-    this._buttons = buttons || {}
+    this._buttons = buttons || { text: '', url: '', target: '_blank' }
   }
 
   /**
@@ -72,7 +72,6 @@ export default class Guide {
   }
 
   getButtons(): IButtons {
-
     return this._buttons
   }
 }

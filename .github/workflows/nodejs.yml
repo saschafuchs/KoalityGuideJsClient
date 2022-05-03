@@ -3,7 +3,7 @@ name: Publish koalityGuideJsClient
 on:
   push:
     branches:
-      - main
+      - json
 
 jobs:
   build:
