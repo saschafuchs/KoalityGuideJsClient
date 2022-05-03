@@ -21,8 +21,6 @@ jobs:
       - run: npm run lint --if-present
       - run: npm run clean --if-present
       - run: npm run esbuild-client --if-present
-        env:
-          CI: true
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

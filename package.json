@@ -5,6 +5,10 @@
   "author": "Nils Langner (nils.langner@leankoala.com)",
   "license": "MIT",
   "main": "./dist/Client.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koality-io/KoalityGuideJsClient.git"
+  },
   "scripts": {
     "dev": "tsc -w -p tsconfig.json",
     "build": "tsc -p tsconfig.json",
