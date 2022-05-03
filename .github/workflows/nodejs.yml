@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@octocat'
+          scope: '@saschafuchs'
       - run: npm ci --no-audit
       - run: npm run lint --if-present
-      - run: npm run cleand --if-present
+      - run: npm run clean --if-present
       - run: npm run esbuild-client --if-present
         env:
           CI: true

@@ -8,11 +8,9 @@
   "scripts": {
     "dev": "tsc -w -p tsconfig.json",
     "build": "tsc -p tsconfig.json",
-    "docs": "typedoc --entryPoints src/Client.ts",
     "esbuild-client": "esbuild src/Client.ts --bundle --minify --sourcemap=external --outfile=dist/GuideClient.js",
     "clean": "rimraf coverage dist",
     "lint": "eslint --format=pretty --cache --max-warnings 0 --fix --ext .ts .",
-    "start": "node dist/src/app.js",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
