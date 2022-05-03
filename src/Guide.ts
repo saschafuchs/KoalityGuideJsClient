@@ -4,19 +4,24 @@
  * @author Nils Langner <nils.langner@webpros.com>
  * @created 2021-08-28
  */
-
 interface IButtons {
-  text: string
-  url?: string
-  target?: string
+  test: any
+}
+
+interface IText {
+  content: string
+  meta?: {
+    language?: string
+    format?: string
+    buttons: IButtons[]
+  }
 }
 
 export default class Guide {
   private _identifier: string
   private _language: string
-  private _text: string
+  private _text: IText
   private _format: string
-  private _buttons: IButtons
 
   /**
    * The constructor.
@@ -25,14 +30,12 @@ export default class Guide {
    * @param {string} language
    * @param {string} text
    * @param {string} format
-   * @param {IButtons} buttons
    */
-  constructor(identifier: string, language: string, text: string, format = 'md', buttons?: IButtons) {
+  constructor(identifier: string, language: string, text: IText, format = 'md') {
     this._identifier = identifier
     this._language = language
     this._text = text
     this._format = format
-    this._buttons = buttons || { text: '', url: '', target: '_blank' }
   }
 
   /**
@@ -40,7 +43,7 @@ export default class Guide {
    *
    * @returns {string}
    */
-  getText(): string {
+  getText(): IText {
     return this._text
   }
 
@@ -69,9 +72,5 @@ export default class Guide {
    */
   getFormat(): string {
     return this._format
-  }
-
-  getButtons(): IButtons {
-    return this._buttons
   }
 }
