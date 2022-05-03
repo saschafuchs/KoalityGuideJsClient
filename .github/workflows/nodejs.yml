@@ -3,7 +3,7 @@ name: Publish koalityGuideJsClient
 on:
   push:
     branches:
-      - gandalf
+      - json
 jobs:
   build:
 
@@ -19,7 +19,8 @@ jobs:
           scope: '@octocat'
       - run: npm ci --no-audit
       - run: npm run lint --if-present
-      - run: npm run build --if-present
+      - run: npm run cleand --if-present
+      - run: npm esbuild-client --if-present
         env:
           CI: true
       - run: npm publish
