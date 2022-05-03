@@ -20,7 +20,7 @@ jobs:
       - run: npm ci --no-audit
       - run: npm run lint --if-present
       - run: npm run cleand --if-present
-      - run: npm esbuild-client --if-present
+      - run: npm run esbuild-client --if-present
         env:
           CI: true
       - run: npm publish
